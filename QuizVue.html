@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>
+
+  </title>
+</header>
+
+<body>
+  <div id="app">
+    <!-- Quiz title -->
+    <h1>{{ quiz.title }}</h1>
+    <!-- Questions: display a div for each question -->
+    <form v-for="(question, index) in quiz.questions">
+      <h2>{{ question.text }}</h2>
+      <!-- Responses: display a li for each possible response with a radio button -->
+      <label>
+        <input type="radio" v-model="selected" :name="index" value="index">
+        {{question.responses[0]}}
+      </label>
+      <label>
+        <input type="radio" v-model="selected" :name="index" value="index">
+        {{question.responses[1]}}
+      </label>
+      <label>
+        <input type="radio" v-model="selected" :name="index" value="index">
+        {{question.responses[2]}}
+      </label>
+      <label>
+        <input type="radio" v-model="selected" :name="index" value="index">
+        {{question.responses[3]}}
+      </label>
+    </form>
+
+  </div>
+
+  <div id="app">
+    <br>
+    <button v-on:click="Submit">
+      Submit
+    </button>
+  </div>
+  </div>
+  </div>
+
+  <script src="index.js"></script>
+
+
+</body>
+
+</html>

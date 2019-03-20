@@ -385,7 +385,7 @@ window.onload = function () {
                             <p v-else-if="score()  > 15">  Well done - Awesome Job You should consider a job as a creche teacher </p>
                             <p v-else>  Error Calulating Score   </p>
 
-                            <button onclick="location.reload();"> Restake Quiz</button>
+                            <button onclick="location.reload();"> Redo Quiz</button>
                     </div>
                     </div>
                     </div>

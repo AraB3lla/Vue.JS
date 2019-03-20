@@ -1,129 +1,401 @@
-let quiz = {
-    title: 'My quiz',
-    questions: [{
-            text: "What colour are grapes?",
-            value: "a",
-            responses: ["Pink", "yellow", "Orange", "purple"],
-            correctAnswer: "Purple"
-        }, {
-            text: "What is the colour of a ripe banana?",
-            value: "b",
-            responses: ["Orange", "Pink", "Green", "Yellow"],
-            correctAnswer: "Yellow"
-        }, {
-            text: "What colour is the sun?",
-            value: "c",
-            responses: ["Orange", "Red", "Yellow", "White"],
-            correctAnswer: "White"
+window.onload = function () {
+
+    var quiz = {
+        title: 'My Vue.js Quiz',
+        questions: [{
+                text: "What colour are grapes?",
+                responses: [{
+                        text: 'Pink'
+                    },
+                    {
+                        text: 'Yellow',
+                        correct: true
+                    },
+                    {
+                        text: 'Orange'
+                    },
+                    {
+                        text: 'Purple'
+                    },
+                ]
+            }, {
+                text: "What is the colour of a ripe banana?",
+                responses: [{
+                        text: 'Pink'
+                    },
+                    {
+                        text: 'Yellow',
+                        correct: true
+                    },
+                    {
+                        text: 'Orange'
+                    },
+                    {
+                        text: 'Purple'
+                    },
+                ]
+            }, {
+                text: "What colour is the sun?",
+                responses: [{
+                        text: 'Pink'
+                    },
+                    {
+                        text: 'Red/Yellow',
+                        correct: true
+                    },
+                    {
+                        text: 'Orange'
+                    },
+                    {
+                        text: 'Purple'
+                    },
+                ]
+            }, {
+                text: "What is the colour of the ocean?",
+                responses: [{
+                        text: 'Pink'
+                    },
+                    {
+                        text: 'Transparent',
+                        correct: true
+                    },
+                    {
+                        text: 'Orange'
+                    },
+                    {
+                        text: 'Purple'
+                    },
+                ]
+            }, {
+                text: "What is the colour of a ruby?",
+                responses: [{
+                        text: 'Pink'
+                    },
+                    {
+                        text: 'Brown'
+                    },
+                    {
+                        text: 'Gold'
+                    },
+                    {
+                        text: 'Red',
+                        correct: true
+                    },
+                ]
+            },
+            {
+                text: "What is the colour of a Jasper?",
+                responses: [{
+                        text: 'Orange'
+                    },
+                    {
+                        text: 'Red'
+                    },
+                    {
+                        text: 'Black'
+                    },
+                    {
+                        text: 'Green',
+                        correct: true
+                    },
+                ]
+            }, {
+                text: "What is the colour of a emereld?",
+                responses: [{
+                        text: 'Purple'
+                    },
+                    {
+                        text: 'Orange'
+                    },
+                    {
+                        text: 'Pink'
+                    },
+                    {
+                        text: 'Light Green',
+                        correct: true
+                    },
+                ]
+            }, {
+                text: "What is the colour of a amethyst?",
+                responses: [{
+                        text: 'Pink'
+                    },
+                    {
+                        text: 'Green'
+                    },
+                    {
+                        text: 'Black'
+                    },
+                    {
+                        text: 'Light Purple',
+                        correct: true
+                    },
+                ]
+            }, {
+                text: "What is the colour of the sky?",
+                responses: [{
+                        text: 'White'
+                    },
+                    {
+                        text: 'Blue'
+                    },
+                    {
+                        text: 'Black'
+                    },
+                    {
+                        text: 'Transparent',
+                        correct: true
+                    },
+                ]
+            }, {
+                text: "What is the colour of a ripe Lemon?",
+                responses: [{
+                        text: 'Green'
+                    },
+                    {
+                        text: 'Orange'
+                    },
+                    {
+                        text: 'Pink'
+                    },
+                    {
+                        text: 'Yellow',
+                        correct: true
+                    },
+                ]
+            }, {
+                text: "What colour are strawberries?",
+                responses: [{
+                        text: 'Yellow'
+                    },
+                    {
+                        text: 'Green'
+                    },
+                    {
+                        text: 'Ivory'
+                    },
+                    {
+                        text: 'Red',
+                        correct: true
+                    },
+                ]
+            }, {
+                text: "Which animal has black and white stripes?",
+                responses: [{
+                        text: 'Lion'
+                    },
+                    {
+                        text: 'Kangaroo'
+                    },
+                    {
+                        text: 'Hippo'
+                    },
+                    {
+                        text: 'Zebra',
+                        correct: true
+                    },
+                ]
+            }, {
+                text: "What does red and blue make when mixed together?",
+                responses: [{
+                        text: 'Orange'
+                    },
+                    {
+                        text: 'Green'
+                    },
+                    {
+                        text: 'Black'
+                    },
+                    {
+                        text: 'Purple',
+                        correct: true
+                    },
+                ]
+            }, {
+                text: "What colour was red riding hoods coat?",
+                responses: [{
+                        text: 'Pink'
+                    },
+                    {
+                        text: 'Green'
+                    },
+                    {
+                        text: 'Orange'
+                    },
+                    {
+                        text: 'Red',
+                        correct: true
+                    },
+                ]
+            }, {
+                text: "What colour is elsa from Frozen's hair?",
+                responses: [{
+                        text: 'Blonde'
+                    },
+                    {
+                        text: 'Black'
+                    },
+                    {
+                        text: 'White'
+                    },
+                    {
+                        text: 'Ginger',
+                        correct: true
+                    },
+                ]
+            }, {
+                text: "Green is made of which two colours?",
+                responses: [{
+                        text: 'Red & Blue'
+                    },
+                    {
+                        text: 'Yellow & Red'
+                    },
+                    {
+                        text: 'Blue & Orange'
+                    },
+                    {
+                        text: 'Yellow & Blue',
+                        correct: true
+                    },
+                ]
+            }, {
+                text: "Which colour is first in the rainbow?",
+                responses: [{
+                        text: 'Pink'
+                    },
+                    {
+                        text: 'Green'
+                    },
+                    {
+                        text: 'Blue'
+                    },
+                    {
+                        text: 'Red',
+                        correct: true
+                    },
+                ]
+            }, {
+                text: "What are flamingo's feathers?",
+                responses: [{
+                        text: 'Blue'
+                    },
+                    {
+                        text: 'Black'
+                    },
+                    {
+                        text: 'Green'
+                    },
+                    {
+                        text: 'Pink',
+                        correct: true
+                    },
+                ]
+            }, {
+                text: "What colour is often linked with love?",
+                responses: [{
+                        text: 'Blue'
+                    },
+                    {
+                        text: 'Black'
+                    },
+                    {
+                        text: 'Green'
+                    },
+                    {
+                        text: 'Red',
+                        correct: true
+                    },
+                ]
+            }, {
+                text: "What colour is the whatsapp logo?",
+                responses: [{
+                        text: 'Blue'
+                    },
+                    {
+                        text: 'Yellow'
+                    },
+                    {
+                        text: 'Red'
+                    },
+                    {
+                        text: 'Green',
+                        correct: true
+                    },
+                ]
+            }
+        ]
+
+
+    };
+
+    new Vue({
+        el: '#app',
+        data: {
+            quiz: quiz,
+            questionIndex: 0,
+            userResponses: Array(quiz.questions.length).fill(false)
         },
-        {
-            text: "What is the colour of the ocean?",
-            value: "d",
-            responses: ["Blue", "Turquious", "Green", "Transparent"],
-            correctAnswer: "Transparent"
-        }, {
-            text: "What is the colour of a ruby?",
-            value: "e",
-            responses: [" Pink", "Brown", "Gold", "Red"],
-            correctAnswer: "Red"
-        }, {
-            text: "What is the colour of a jasper?",
-            value: "f",
-            responses: ["Orange", "Red", "Black", "Green"],
-            correctAnswer: "Green"
-        }, {
-            text: "What is the colur of an emereld?",
-            value: "g",
-            responses: ["Purple", "Orange", "Pink", "Light Green"],
-            correctAnswer: "Light Green"
-        }, {
-            text: "What is the colour of an amethyst?",
-            value: "h",
-            responses: ["Pink", "Green", "Black", "Light Purple"],
-            correctAnswer: "Light Purple"
-        }, {
-            text: "What colour is the sky?",
-            value: "c",
-            responses: ["white", "Blue", "Black", "Transparent"],
-            correctAnswer: "Transparent"
-        }, {
-            text: "What is the colour of a ripe lemon?",
-            value: "c",
-            responses: ["Green", "Orange", "Pink", "Yellow"],
-            correctAnswer: "Yellow"
-        }, {
-            text: "What colour are strawberries?",
-            value: "c",
-            responses: ["", "Yellow", "Green", "Red"],
-            correctAnswer: "Red"
-        }, {
-            text: "Which animal has black and white stripes?",
-            value: "c",
-            responses: ["Lion", "Kangaroo", "Hippo", "Zebra"],
-            correctAnswer: "Zebra"
-        }, {
-            text: "What does red and blue make when mixed together?",
-            value: "c",
-            responses: ["Orange", "Green", "Black", "Purple"],
-            correctAnswer: "Purple"
+        methods: {
+            // Go to next question
+            next: function () {
+                this.questionIndex++;
+            },
+            prev: function () {
+                this.questionIndex--;
+            },
+            score: function () {
+                return this.userResponses.filter(function (val) {
+                    return val
+                }).length;
 
-        }, {
-            text: "What colour was Red Riding Hoods coat?",
-            value: "c",
-            responses: ["Pink", "Green", "Orange", "Red"],
-            correctAnswer: "Red"
-        }, {
-            text: "What colour is elsa from Frozens hair?",
-            value: "c",
-            responses: ["Blonde", "Black", "White", "Orange"],
-            correctAnswer: "Orange"
-        }, {
-            text: "Green is made of which two colours?",
-            value: "c",
-            responses: ["Red & blue", "Yellow & Red", "Blue & Orange", "Yellow & Blue"],
-            correctAnswer: "Yellow & Blue"
-        }, {
-            text: "Which colour is the first in the rainbow?",
-            value: "c",
-            responses: ["Pink", "Green", "blue", "Red"],
-            correctAnswer: "Red"
-        }, {
-            text: "What colour are flamingo's feathers?",
-            value: "c",
-            responses: ["Blue", "Red", "Purple", "Pink"],
-            correctAnswer: "Pink"
-        }, {
-            text: "What colour is often linked to love?",
-            value: "c",
-            responses: ["Blue", "Black", "Green", "Red"],
-            correctAnswer: "Red"
-        }, {
-            text: "What colour is the whatsapp logo?",
-            value: "c",
-            responses: ["Blue", "Yellow", "Red", "Green"],
-            correctAnswer: "Green"
-        }
-    ]
-
-};
-
-
-
-
-new Vue({
-    el: '#app',
-    data: {
-        selected: 0,
-        quiz: quiz,
-        // Store current question index
-        questionIndex: 0,
-    },
-    // The view will trigger these methods on click
-    methods: {
-        // Go to next question
-        next: function () {
-            this.questionIndex++;
+            }
         },
+        template: `
+            <div id="wrapper">
+                        <h1>{{ quiz.title }}</h1>
+                        <div v-for="(question, index) in quiz.questions">
+                        <div v-show="index == questionIndex">
+                            <h3> {{ question.text }}</h3>
+                            <ul>
+                            <li v-for="response in question.responses">
+                                <label>
+                                <input type="radio"
+                                        :value="response.correct"
+                                        :name="index"
+                                        v-model="userResponses[index]"> {{ response.text }}
+                                </label>
+                            </li>
+                            </ul>
+                            <button v-if="questionIndex > 0" @click="prev">
+                            Prev Question
+                            </button>
+                            <button @click="next">
+                            Next Question
+                            </button>
+                        </div>
+                    </div>
 
-    }
-});
+                    <div v-show="questionIndex === quiz.questions.length">
+                            <h2> Quiz Complete </h2>
+                            <p>  Total Score: {{ score() }} / {{ quiz.questions.length }} </p>
+
+                            <p v-if="score()  < 10">  Try Again - Try Harder - Think Carefully about each question  </p>
+                            <p v-else-if="score()  >= 10 && score()  <= 15 ">  Good Job - Try a bit harder to get a better score  </p>
+                            <p v-else-if="score()  > 15">  Well done - Awesome Job You should consider a job as a creche teacher </p>
+                            <p v-else>  Error Calulating Score   </p>
+
+                            <button onclick="location.reload();"> Restake Quiz</button>
+                    </div>
+                    </div>
+                    </div>
+                                
+                                
+                                `,
+
+
+    });
+}
+
+
+//
